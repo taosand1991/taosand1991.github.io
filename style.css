@@ -871,6 +871,7 @@ body {
     bottom: -130px;
     right: 10%;
     display: inline-flex;
+    position: relative;
     justify-content: space-evenly;
   }
   .social-media .media-icons {
