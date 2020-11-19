@@ -17,6 +17,7 @@
     const listItem = document.querySelectorAll('li')
     listItem.forEach(item => {
         item.onclick = function(){   
+            console.log('i am licked')
             for(let list of listItem){
                 list.classList.remove('active')
             }
@@ -65,12 +66,14 @@ show.onclick = function(){
     overlay.style.opacity = 1;
     overlay.style.width = '100%'
     overlay.style.height = '100%'
+    overlay.style.visibility = 'visible'
 }
 
 close.onclick = function(){
     overlay.style.opacity = 0;
     overlay.style.width = '0'
     overlay.style.height = '0'
+    overlay.style.visibility = 'hidden'
 }
 // lotties.forEach(lottie => {
 //     lottie.addEventListener('mouseenter', () => {

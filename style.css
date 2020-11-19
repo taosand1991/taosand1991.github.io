@@ -45,6 +45,7 @@ body {
   width: 0;
   height: 0;
   opacity: 0;
+  visibility: hidden;
   transition: all 0.2s linear;
 }
 
@@ -665,18 +666,14 @@ body {
   }
   .inner-side {
     z-index: 0;
-    height: 100%;
-    width: fit-content;
+    height: 100% !important;
+    width: 100%;
+    overflow: visible;
     overflow-y: scroll;
-    overflow-x: hidden;
+    overflow-x: scroll;
   }
 
   .nav-head {
-    width: fit-content;
-  }
-
-  .nav-head,
-  .inner-side {
     width: 100%;
     height: 100%;
   }
@@ -771,19 +768,23 @@ body {
   .small-container {
     width: 90%;
     height: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 
   .lottie-view {
     width: 100%;
-    padding: 0 10px;
+    padding: 0 2px;
+    margin-right: 0;
+    margin-left: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 
   .lottie {
-    width: 150px;
-    margin-right: 10px;
+    width: 100px;
+    margin: 15px 5px;
+    /* padding: 5px; */
   }
   .text-inside {
     font-size: 27px;
@@ -836,16 +837,16 @@ body {
     justify-content: center;
   }
 
-  /* .second-page {
+  .second-page {
     opacity: 1;
     height: 100%;
     transform: scale(1);
-  } */
+  }
 
   .main-page {
     flex-direction: column;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     justify-content: center;
     align-items: center;
   }
@@ -858,7 +859,7 @@ body {
   }
 
   .overlay-clip {
-    bottom: -300px;
+    bottom: -500px;
     left: 0;
     right: 0;
     width: 100%;
@@ -867,7 +868,7 @@ body {
 
   .social-media {
     top: auto;
-    bottom: 0;
+    bottom: -130px;
     right: 10%;
     display: inline-flex;
     justify-content: space-evenly;
@@ -881,14 +882,16 @@ body {
   }
 
   #show-bar-icon {
-    position: absolute;
-    top: 90%;
-    left: 5%;
+    position: fixed;
+    top: 70%;
+    left: 10px;
+    z-index: 1000;
+    display: block;
     transition: 0.2s linear;
   }
   #show-bar-icon .bar-icon {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background-color: #871966;
     z-index: 1000;
@@ -917,8 +920,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 42%;
+    position: fixed;
+    top: 10%;
     left: 5%;
     z-index: 1000;
     transform: scale(0);
@@ -929,16 +932,18 @@ body {
     animation: delay-me 0.5s ease-in-out forwards;
   }
   .side-bar-icons .fav {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     display: flex;
+    cursor: pointer;
     justify-content: center;
     align-items: center;
     background: #871966;
     font-size: 30px;
     color: white;
     margin-top: 10px;
+    z-index: 1000;
   }
   @keyframes delay-me {
     0% {
