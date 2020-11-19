@@ -638,7 +638,7 @@ body {
   height: 80%;
   background-color: orange;
   margin: 60px 0;
-  /* border-radius: 50%; */
+  border-radius: 50%;
 }
 
 .social-media .media-icons i {
