@@ -884,7 +884,7 @@ body {
     height: 80%;
     background-color: orange;
     margin: 0;
-    border-radius: 50%;
+    /* border-radius: 50%; */
   }
 
   .overlay-3 {
